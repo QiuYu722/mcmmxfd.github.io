@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秘密小分队 - 照片</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-title">秘密小分队</div>
+        <nav class="nav" aria-label="主导航">
+            <ul>
+                <li><a href="index.html" class="nav-link">主页</a></li>
+                <li><a href="map.html" class="nav-link">地图</a></li>
+                <li><a href="picture.html" class="nav-link">照片</a></li>
+                <li><a href="user.html" class="nav-link">玩家</a></li>
+                <li><a href="activity.html" class="nav-link">活动</a></li>
+                <li><a href="about.html" class="nav-link">关于我们</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <div>
+            <h3>待建建筑</h3>
+            <p>动物园<p>
+        </div>
+        <img src="image/index/zhao.png" alt=" Zhao">
+    </aside>
+
+    <main class="content-panel content-panel-oak">
+        <section id="photo" class="page">
+            <!-- 第一板块：轮播图占位色块 -->
+            <div class="mc-panel photo-panel-1">
+                <div class="photo-panel-row">
+                    <div class="carousel-block">
+                        <div class="carousel-container" style="width: 696px; height: 410px;">
+                            <div class="carousel-slides" id="carouselSlides">
+                                <div class="carousel-slide active">
+                                    <img src="image/GroupPhoto/hz1.jpg" alt="合影 1">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="image/GroupPhoto/hz2.jpg" alt="合影 2">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="image/GroupPhoto/hz3.jpg" alt="合影 3">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="image/GroupPhoto/hz4.jpg" alt="合影 4">
+                                </div>
+                            </div>
+                            <div class="carousel-indicators" id="carouselIndicators"></div>
+                        </div>
+                    </div>
+                    <div class="agen-block">
+                        <img src="image/index/agen.png" alt="Agen">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第一板块与第二板块之间的水平线（栅栏图案平铺） -->
+            <div class="container-hr">
+                <div></div>
+                <img src="image/index/iron.png">
+                <div></div>
+                <img src="image/index/iron.png">
+                <div></div>
+            </div>
+
+            <!-- 第二板块：公告板 + 图片展示（大图+小图 / 三小图） -->
+            <div class="mc-panel photo-panel-2">
+                <div class="photo-grid-2">
+                    <aside class="announcement-board">
+                        <div class="announcement-title">公告板</div>
+                        <img class="announcement-jiang" src="image/index/jiang.png" alt="jiang" />
+                        <div class="announcement-body">
+                            <div class="announce-line">欢迎来到秘密小分队服务器<br /><br />玩法已上线：生存 / 建造<br />
+                                <br />整合包：香草纪元<br />
+                                <br />服务器状态：运行中<br />
+                                <br /><a style="text-decoration: none;color: white;"
+                                    href="https://www.xiaohongshu.com/user/profile/586125215e87e7041551c814?xsec_token=AB4PnEiYgqq6BIfHz4AtgeWIBw6Y8G5RnWT6RjGus243c%3D&xsec_source=pc_search">小红书链接</a>
+                            </div>
+
+                        </div>
+                    </aside>
+
+                    <div aria-label="图片展示占位块">
+
+                        <div class="img-ph" style="--ph-w: 640px; --ph-h: 442px; height: 442px;">
+                            <p style="font-size: 40px;">宣传视频（待做ing）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-hr">
+                <div></div>
+                <img src="image/index/iron.png">
+                <div></div>
+                <img src="image/index/iron.png">
+                <div></div>
+            </div>
+
+            <!-- 第三板块：三个名字各自三张照片 -->
+            <div class="mc-panel photo-panel-3">
+                <div class="location-title">
+                    <p>地&nbsp&nbsp&nbsp&nbsp标</p>
+                </div>
+                <img src="image/index/location.png" alt="位置图标" class="location-photo">
+                <div id="playerCards" class="player-cards">
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>樱花树</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/Landmark/CherryBlossom/yhs.jpg" alt="地标 1 图片 A" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/CherryBlossom/yhs1.jpg" alt="地标 1 图片 B" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/CherryBlossom/yhs2.jpg" alt="地标 1 图片 C" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>总部</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/Landmark/Headquarters/zb1.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/Headquarters/zb2.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/Headquarters/zb3.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>照相收藏馆</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/Landmark/camera/zxg2.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/camera/zxg1.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/camera/zxg.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>自助餐厅</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/Landmark/restaurant/ct.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/restaurant/ct1.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/restaurant/ct2.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>博物馆</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/Landmark/museum/bwg.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/museum/bwg1.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/museum/bwg2.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>竞技场</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/Landmark/fight/jjc.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>艾兰德神殿</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/Landmark/temple/sd.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/temple/sd2.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/temple/sd1.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>万花城</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>摘星桦</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>殿堂</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>KFC</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/Landmark/KFC/kfc.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/KFC/kfc1.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/Landmark/KFC/kfc2.jpg" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2>村民交易所</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="image/update.png" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秘密小分队 - 地图</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-title">秘密小分队</div>
+        <nav class="nav" aria-label="主导航">
+            <ul>
+                <li><a href="index.html" class="nav-link">主页</a></li>
+                <li><a href="map.html" class="nav-link">地图</a></li>
+                <li><a href="picture.html" class="nav-link">照片</a></li>
+                <li><a href="user.html" class="nav-link">玩家</a></li>
+                <li><a href="activity.html" class="nav-link">活动</a></li>
+                <li><a href="about.html" class="nav-link">关于我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-panel">
+        <section id="map" class="page">
+            <div class="mc-panel map-panel" style="height:600px ">
+                <div class="map-view" id="mapView" aria-label="可拖拽缩放地图">
+                    <div class="map-inner" id="mapInner">
+                        <img src="image/map.png" alt="地图" class="map-image">
+                    </div>
+                </div>
+                <img src="image/index/bailandi.png" alt="百兰地" class="bailandi-image">
+                <div class="map-hint">提示：鼠标按住拖拽，滚轮缩放</div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,1178 @@
+/* ========================================
+   基础样式 - Minecraft 风格主题
+   ======================================== */
+
+/* MC 风格基础样式（占位图也会使用这套像素块风格） */
+* {
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+body {
+  font-family: "Minecraft", "Minecraftia", "Press Start 2P", system-ui, -apple-system, sans-serif;
+  margin: 0;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("image/index/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  will-change: transform;
+}
+
+/* ========================================
+   顶部导航栏样式
+   ======================================== */
+
+.header {
+  background-color: #5878ab;
+  height: 60px;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-title {
+  color: #dde4ee;
+  font-size: 25px;
+  font-weight: 700;
+  justify-self: start;
+  text-shadow: 0 2px 0 #5878ab;
+}
+
+.header-login {
+  justify-self: end;
+}
+
+.login-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+/* 导航菜单 */
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+}
+
+.nav ul li {
+  display: inline-block;
+}
+
+.nav ul li a {
+  color: #dde4ee;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.nav ul li a:hover {
+  color: #d5843e; /* 悬停字体改为褐色 */
+}
+
+/* ========================================
+   侧边栏样式（右下角待建建筑）
+   ======================================== */
+
+.sidebar {
+  position: fixed;
+  bottom: -10px;
+  right: -2px;
+  z-index: 999;
+}
+
+.sidebar div {
+  width: 150px;
+  border-radius: 8px;
+  background: rgb(237, 254, 255);
+}
+
+.sidebar div p {
+  margin: 0;
+  padding: 8px 12px;
+  color: #196090;
+  text-align: center;
+  font-size: 16px;
+}
+
+.sidebar div h3 {
+  margin: 0;
+  padding: 8px 12px;
+  color: #000000;
+  text-align: center;
+}
+
+.sidebar img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+/* ========================================
+   内容面板基础样式
+   ======================================== */
+
+.content-panel {
+  width: 1100px; /* 1k 固定画布宽度，避免缩放时位置漂移 */
+  max-width: 1000px;
+  min-width: 1000px;
+  margin: 83px auto 18px;
+  background-color: #ffffff;
+  border-radius: 10px; /* 与 .mc-panel 圆角对齐 */
+  overflow: hidden; /* 确保圆角裁切一致 */
+}
+
+.content-panel-oak {
+  background-color: transparent; /* 替换纯色为贴图 */
+  background-image: url("image/Texture/oak.png");
+  background-repeat: repeat;
+  padding: 16px;
+  background-size: 50px 50px;
+}
+
+.page {
+  display: block;
+}
+
+/* 橡木围栏分隔线 */
+.oak-divider {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  border-radius: 0;
+  overflow: hidden; /* 防止伪元素偏移导致边缘看起来发圆 */
+  background-image: url("image/oak_fence.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 50px;
+  margin: 0;
+}
+
+.oak-divider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("image/oak_fence.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 50px;
+  transform: translateY(-6px);
+  filter: brightness(1.18) contrast(1.05);
+  opacity: 0.28;
+  mix-blend-mode: screen;
+  border-radius: 0;
+  pointer-events: none;
+}
+
+.oak-divider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("image/oak_fence.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 50px;
+  transform: translateY(6px);
+  filter: brightness(0.78) contrast(1.05);
+  opacity: 0.25;
+  mix-blend-mode: multiply;
+  border-radius: 0;
+  pointer-events: none;
+}
+
+/* ========================================
+   MC 通用组件样式
+   ======================================== */
+
+.mc-panel {
+  background: linear-gradient(#2c3d6b, #243257);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.mc-button {
+  background: #2f8f2f;
+  color: #f7fff7;
+  border: 3px solid rgba(0, 0, 0, 0.25);
+  border-bottom-width: 6px;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.mc-button:hover {
+  filter: brightness(1.05);
+}
+
+.mc-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mc-select {
+  width: 220px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 3px solid rgba(0, 0, 0, 0.25);
+  background: #111a2e;
+  color: #eaf2ff;
+  font-weight: 700;
+}
+
+.mc-select[multiple] {
+  height: auto;
+  min-height: 100px;
+}
+
+.mc-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 3px solid rgba(0, 0, 0, 0.25);
+  background: #0f1730;
+  color: #eaf2ff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ========================================
+   第一板块：轮播图 + Agen 角色展示
+   对应 HTML: photo-panel-1
+   包含：合影轮播图（696x410）+ 右侧 Agen 图片
+   ======================================== */
+
+.photo-panel-1 {
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-image: url("image/Texture/wool.png");
+  background-repeat: repeat;
+  background-size: 50px 50px;
+}
+
+.photo-panel-1 .photo-panel-row {
+  position: relative;
+  z-index: 1;
+}
+
+.photo-panel-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.carousel-block {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Agen 角色图片定位 */
+.agen-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agen-block img {
+  max-width: 300px;
+  height: auto;
+  position: absolute;
+  top: 40px;
+  right: -20px;
+}
+
+/* 轮播图容器 */
+.carousel-container {
+  position: relative;
+  width: 690px;
+  height: 404px;
+  overflow: hidden;
+  margin: 0 auto 0 10px;
+  border-radius: 8px;
+  border: 4px solid #381905;
+}
+
+.carousel-slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-slide img {
+  width: 690px;
+  height: 404px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 轮播图指示器 */
+.carousel-indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgb(243, 227, 227);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-indicator.active {
+  background: rgb(237, 223, 223);
+  transform: scale(1.2);
+}
+
+.carousel-indicator:hover {
+  background: rgb(232, 218, 218);
+}
+
+.carousel-controls {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+/* ========================================
+   水平分隔线（铁轨图案）
+   用于分隔各个版块
+   ======================================== */
+
+.container-hr {
+  width: 968px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr; /* 列结构：左空隙 | 图片 1 | 中空隙 | 图片 2 | 右空隙 */
+  align-items: center;
+}
+
+/* 图片固定为 35px × 30px */
+.container-hr>img {
+  width: 35px;
+  height: 30px;
+  object-fit: cover; /* 图片会裁剪填满，不变形 */
+}
+
+/* ========================================
+   第二板块：公告板 + 宣传视频占位
+   对应 HTML: photo-panel-2
+   包含：左侧公告板（280px）+ 右侧宣传视频区域（640x442）
+   ======================================== */
+
+.photo-panel-2 {
+  padding: 12px;
+  background-image: url("image/Texture/stone.jpg");
+  background-repeat: repeat;
+  background-size: 50px 50px;
+}
+
+.photo-grid-2 {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 14px;
+}
+
+/* 公告板样式 */
+.announcement-board {
+  border: 4px solid rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background: linear-gradient(#7a4a1f, #5d3715);
+  padding: 12px;
+  height: 442px;
+  position: relative; /* 便于内部图片左下角定位 */
+}
+
+.announcement-jiang {
+  position: absolute;
+  bottom: 12px;
+  width: 200px;
+  height: auto;
+  z-index: 2; /* 放在文字上方 */
+  pointer-events: none; /* 不影响用户选择/拖拽 */
+  transform: translate(-16px, 16px);
+}
+
+.announcement-title {
+  font-weight: 950;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  text-align: center; /* 文字在公告标题栏内居中 */
+}
+
+.announcement-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.announce-line {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 750;
+}
+
+/* 图片占位块通用样式 */
+.img-ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.05) 12px,
+      rgba(0, 0, 0, 0.08) 24px);
+  border: 3px solid rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  color: #eaf2ff;
+  font-weight: 900;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* 三张照片布局的图片尺寸 */
+.img-ph-3 {
+  width: 292px;
+  height: auto;
+  background-color: rgba(233, 30, 99, 0.35);
+}
+
+/* ========================================
+   第三板块：地标展示区
+   对应 HTML: photo-panel-3
+   包含：地标标题 + 位置图标 + 多个玩家卡片（每个含 3 张照片）
+   ======================================== */
+
+.photo-panel-3 {
+  padding: 12px;
+  position: relative;
+  background-image: url("image/Texture/quartzblock.jpg");
+  background-repeat: repeat;
+  padding: 16px;
+  background-size: 50px 50px;
+}
+
+.photo-panel-3 h2,
+p {
+  color: #196090;
+}
+
+.photo-panel-3 p {
+  text-align: center;
+  line-height: 3;
+  font-size: 50px;
+  font-weight: 950;
+  margin: 0px;
+}
+
+/* 地标标题背景（高斯普图案） */
+.location-title {
+  position: relative;
+  left: 290px;
+  top: -17px;
+  right: 20px;
+  width: 349px;
+  height: 128px;
+  background-image: url("image/index/gsp.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+/* 位置图标图片 */
+.location-photo {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  width: 240px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 玩家选择器（未在 index.html 使用，保留给其他页面） */
+.player-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.player-selector-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.player-selector-label {
+  font-weight: 900;
+}
+
+.player-dropdown {
+  position: relative;
+}
+
+.player-dropdown-summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 900;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 3px solid rgba(0, 0, 0, 0.25);
+  background: #111a2e;
+  color: #eaf2ff;
+  user-select: none;
+}
+
+.player-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.player-checkboxes {
+  margin-top: 0; /* 提示词和下拉列表之间不留空 */
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 3px solid rgba(0, 0, 0, 0.25);
+  background: #111a2e;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 240px;
+}
+
+.player-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  color: #eaf2ff;
+}
+
+.player-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2f8f2f;
+}
+
+/* 玩家卡片容器 */
+.player-cards {
+  display: flex;
+  flex-direction: column; /* 每个小板块独占一行 */
+  align-items: stretch;
+}
+
+.player-card {
+  display: block;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.player-card-id {
+  width: 180px;
+  height: 50px;
+  background: linear-gradient(to right, rgba(134, 18, 132, 0.196), rgba(221, 88, 206, 0.004));
+  margin-bottom: 10px;
+}
+
+.player-card-id h2 {
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+/* 玩家照片网格（每行 3 张） */
+.player-card-photos {
+  display: flex;
+  gap: 14px;
+}
+
+/* ========================================
+   地图页面样式（map.html 使用）
+   ======================================== */
+
+.map-panel {
+  padding: 0;
+  position: relative;
+}
+
+.map-view {
+  width: 100%;
+  height: 520px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 4px solid rgba(0, 0, 0, 0.25);
+  background: linear-gradient(#131a33, #0d1230);
+  position: relative;
+}
+
+.map-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+
+.map-placeholder {
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 0.12);
+  width: var(--ph-w, 1200px);
+  height: var(--ph-h, 800px);
+  background-color: rgba(33, 150, 243, 0.25);
+}
+
+.map-image {
+  width: 1200px;
+  height: 800px;
+  display: block;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.bailandi-image {
+  position: absolute;
+  bottom: -10px;
+  right: -60px;
+  width: auto;
+  height: 240px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.map-hint {
+  padding: 25px 20px;
+  font-size: 20px;
+}
+
+/* ========================================
+   用户页面样式（user.html 使用）
+   ======================================== */
+
+.user-page {
+  padding: 12px;
+  background-image: url("image/Texture/oak.png");
+  background-repeat: repeat;
+  background-size: 50px 50px;
+}
+
+.user-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.user-card-header {
+  padding: 16px 20px;
+  background: #dde4ee;
+  border-bottom: 2px solid rgba(133, 114, 114, 0.12);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform-origin: left center;
+}
+
+.user-card-header:hover {
+  background: rgba(0, 0, 0, 0.25);
+  transform: scale(1.2);
+}
+
+.user-card-title {
+  margin: 0;
+  padding: 0;
+  font-weight: 950;
+  font-size: 22px;
+  color: #5878ab;
+  display: inline-block;
+}
+
+.user-card-body {
+  padding: 20px;
+  transition: all 0.4s ease;
+  max-height: 2000px;
+  opacity: 1;
+  background-image: url("image/Texture/wool.png");
+  background-repeat: repeat;
+  background-size: 50px 50px;
+}
+
+.user-card.collapsed .user-card-body {
+  display: none;
+}
+
+.user-card.collapsed .user-card-header {
+  border-bottom: none;
+}
+
+.user-two-col {
+  display: flex;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.user-col {
+  min-width: 0;
+}
+
+.user-col-left {
+  flex: 0 0 220px;
+  width: 220px;
+  position: relative;
+}
+
+.user-col-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.user-skin-image {
+  width: 220px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.user-skin-image:hover {
+  transform: scale(1.05);
+}
+
+.user-skin-image.patting {
+  animation: patAnimation 1s ease-in-out;
+}
+
+@keyframes patAnimation {
+  0% {
+    transform-origin: bottom center;
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform-origin: bottom center;
+    transform: scaleY(0.9);
+  }
+
+  100% {
+    transform-origin: bottom center;
+    transform: scaleY(1);
+  }
+}
+
+.user-skin-patpat {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: auto;
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.user-skin-patpat.show {
+  opacity: 1;
+  animation: showPatAnimation 1s ease-in-out;
+}
+
+@keyframes showPatAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+.user-block {
+  padding: 10px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.user-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 14px;
+  width: 100%;
+  height: auto;
+}
+
+.user-photo-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-photo-item-img {
+  width: 340px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid rgba(233, 30, 99, 0.35);
+  transition: transform 0.3s ease;
+}
+
+/* ========================================
+   照片墙页面样式（picture.html 使用）
+   ======================================== */
+
+.photo-wall-container {
+  width: 1210px;
+  max-width: 1210px;
+  min-width: 1210px;
+  margin: 83px auto 18px;
+  background-image: url("image/Texture/oak.png");
+  background-repeat: repeat;
+  background-size: 50px 50px;
+  padding: 14px;
+  border-radius: 8px;
+}
+
+.photo-wall {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+.wall-photo {
+  width: 285px;
+  height: 213px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+  background-color: rgba(233, 30, 99, 0.35);
+}
+
+/* 图片网格布局（第二版块中使用，已内联在 HTML 中） */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 260px 170px;
+  gap: 12px;
+}
+
+.image-grid .img-ph {
+  width: 100%;
+  height: 100%;
+}
+
+/* ========================================
+   活动页面样式（activity.html 使用）
+   ======================================== */
+
+/* 活动页面主容器 */
+.activity-main {
+  width: 920px;
+  margin: 83px auto 18px;
+  background-image: url("image/Texture/quartzblock.jpg");
+  background-repeat: repeat;
+  background-size: 50px 50px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* 活动卡片容器 */
+.activity-card {
+  width: 896px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* 活动卡片中的日期段落 - 水平居中 */
+.activity-card > p {
+  text-align: center;
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #6b8abd;
+}
+
+
+/* 活动标题 */
+.activity-title {
+  text-align: center;
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  font-weight: 900;
+  color: #5878ab;
+}
+
+/* 活动照片网格容器 */
+.activity-photo-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  gap: 20px;
+  justify-content: center;
+}
+
+/* 活动照片 */
+.activity-photo {
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  border: 3px solid rgba(0, 0, 0, 0.25);
+}
+
+/* 活动头像 */
+.activity-avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 阿根头像特殊样式 */
+.activity-avatar-agen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: auto;
+  border-radius: 10%;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ========================================
+   图片放大查看器（Lightbox）样式
+   用于 .img-ph.img-ph-3, .wall-photo, .user-photo-item-img
+   ======================================== */
+
+.image-lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-lightbox.active {
+  display: flex;
+  opacity: 1;
+}
+
+.image-lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.image-lightbox.active img {
+  transform: scale(1);
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 10001;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+.image-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 可点击图片的光标样式 */
+.img-ph-3.clickable,
+.wall-photo.clickable,
+.user-photo-item-img.clickable {
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-ph-3.clickable:hover,
+.wall-photo.clickable:hover,
+.user-photo-item-img.clickable:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   关于我们页面样式（about.html 使用）
+   ======================================== */
+
+.about-container {
+  width: 950px;
+  height: 610px;
+  background-image: url('image/avator/book.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 80px auto 0;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+.book-left {
+  margin-left: 80px;
+  flex: 1;
+}
+
+.book-left-content {
+  width: 360px;
+  height: 200px;
+  text-align: center;
+}
+
+.book-left-avatars {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  gap: 10px;
+}
+
+.book-left-avatars img {
+  width: 50px;
+  height: 50px;
+}
+
+.book-right {
+  margin-left: 30px;
+  flex: 1;
+  width: 300px;
+}
+
+.book-right h3 {
+  margin: 0;
+  color: #f1af16;
+}
+
+.book-right p {
+  margin: 10px 0 0 0;
+}
+
+.book-right hr {
+  width: 80%;
+  margin-left: 0;
+  border: 2px solid #cab88f;
+}
