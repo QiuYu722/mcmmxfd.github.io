@@ -434,7 +434,7 @@ body::before {
   border-radius: 10px;
   background: linear-gradient(#7a4a1f, #5d3715);
   padding: 12px;
-  height: 442px;
+  height: 400px;
   position: relative; /* 便于内部图片左下角定位 */
 }
 
