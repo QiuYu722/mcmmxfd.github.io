@@ -337,5 +337,6 @@
     initMapDragZoom();      // 初始化地图拖拽（map.html）
     initUserCards();        // 初始化用户卡片（user.html）
     initImageLightbox();    // 初始化图片放大查看功能
+
   });
 })();

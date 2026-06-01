@@ -23,94 +23,34 @@
             </ul>
         </nav>
     </header>
-    <aside class="sidebar">
-        <div>
-            <h3>待建建筑</h3>
-            <p>动物园<p>
-        </div>
-        <img src="image/index/zhao.png" alt=" Zhao">
-    </aside>
 
     <main class="content-panel content-panel-oak">
         <section id="photo" class="page">
-            <!-- 第一板块：轮播图占位色块 -->
-            <div class="mc-panel photo-panel-1">
-                <div class="photo-panel-row">
-                    <div class="carousel-block">
-                        <div class="carousel-container" style="width: 696px; height: 410px;">
-                            <div class="carousel-slides" id="carouselSlides">
-                                <div class="carousel-slide active">
-                                    <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/GroupPhoto/hz1.webp" alt="合影 1">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/GroupPhoto/hz2.webp" alt="合影 2">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/GroupPhoto/hz3.webp" alt="合影 3">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/GroupPhoto/hz4.webp" alt="合影 4">
-                                </div>
-                            </div>
-                            <div class="carousel-indicators" id="carouselIndicators"></div>
-                        </div>
-                    </div>
-                    <div class="agen-block">
-                        <img src="image/index/agen.png" alt="Agen">
-                    </div>
-                </div>
-            </div>
-
-            <!-- 第一板块与第二板块之间的水平线（栅栏图案平铺） -->
-            <div class="container-hr">
-                <div></div>
-                <img src="image/index/iron.png">
-                <div></div>
-                <img src="image/index/iron.png">
-                <div></div>
-            </div>
-
-            <!-- 第二板块：公告板 + 图片展示（大图+小图 / 三小图） -->
-            <div class="mc-panel photo-panel-2">
-                <div class="photo-grid-2">
-                    <aside class="announcement-board">
-                        <div class="announcement-title">公告板</div>
-                        <img class="announcement-jiang" src="image/index/jiang.png" alt="jiang" />
-                        <div class="announcement-body">
-                            <div class="announce-line">欢迎来到秘密小分队服务器<br /><br />玩法已上线：生存 / 建造<br />
-                                <br />整合包：香草纪元<br />
-                                <br />服务器状态：运行中<br />
-                                
-                            </div>
-
-                        </div>
-                    </aside>
-
-                    <div aria-label="图片展示占位块">
-
-                        <video src="image/video.mp4" controls style="width: 640px; height: 400px;margin-top: -10px;"></video>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <div class="container-hr">
-                <div></div>
-                <img src="image/index/iron.png">
-                <div></div>
-                <img src="image/index/iron.png">
-                <div></div>
-            </div> -->
-
-            <!-- 第三板块：三个名字各自三张照片 -->
             <div class="mc-panel photo-panel-3">
                 <div class="location-title">
                     <p>地&nbsp&nbsp&nbsp&nbsp标</p>
+                </div>
+                <div class="landmark-nav">
+                    <a href="#yinghua" class="landmark-link">#樱花树</a>
+                    <a href="#zongbu" class="landmark-link">#总部</a>
+                    <a href="#zhaoxiang" class="landmark-link">#照相收藏馆</a>
+                    <a href="#zizhu" class="landmark-link">#自助餐厅</a>
+                    <a href="#bowuguan" class="landmark-link">#博物馆</a>
+                    <a href="#jingji" class="landmark-link">#竞技场</a>
+                    <a href="#shendian" class="landmark-link">#艾兰德神殿</a>
+                    <a href="#wanhua" class="landmark-link">#万花城</a>
+                    <a href="#zhaixing" class="landmark-link">#摘星桦</a>
+                    <a href="#libai" class="landmark-link">#花园礼拜堂</a>
+                    <a href="#kfc" class="landmark-link">#KFC</a>
+                    <a href="#jiaoyi" class="landmark-link">#村民交易所</a>
+                    <a href="#dujiadao" class="landmark-link">#度假岛</a>
+                    <a href="#jiaotang" class="landmark-link">#教堂</a>
                 </div>
                 <img src="image/index/location.png" alt="位置图标" class="location-photo">
                 <div id="playerCards" class="player-cards">
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>樱花树</h2>
+                            <h2 id="yinghua">樱花树</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/CherryBlossom/yhs.webp" alt="地标 1 图片 A" class="img-ph img-ph-3" loading="lazy">
@@ -121,7 +61,7 @@
 
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>总部</h2>
+                            <h2 id="zongbu">总部</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/Headquarters/zb1.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
@@ -132,7 +72,7 @@
 
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>照相收藏馆</h2>
+                            <h2 id="zhaoxiang">照相收藏馆</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/camera/zxg2.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
@@ -143,7 +83,7 @@
 
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>自助餐厅</h2>
+                            <h2 id="zizhu">自助餐厅</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/restaurant/ct.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
@@ -154,7 +94,7 @@
 
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>博物馆</h2>
+                            <h2 id="bowuguan">博物馆</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/museum/bwg.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
@@ -165,7 +105,7 @@
 
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>竞技场</h2>
+                            <h2 id="jingji">竞技场</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/fight/jjc.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
@@ -176,7 +116,7 @@
 
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>艾兰德神殿</h2>
+                            <h2 id="shendian">艾兰德神殿</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/temple/sd.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
@@ -187,7 +127,7 @@
                     
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>万花城</h2>
+                            <h2 id="wanhua">万花城</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/flower/h.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
@@ -198,7 +138,7 @@
 
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>摘星桦</h2>
+                            <h2 id="zhaixing">摘星桦</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/Treehouse/sw.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
@@ -209,7 +149,7 @@
 
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>花园礼拜堂</h2>
+                            <h2 id="libai">花园礼拜堂</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/diantang/dt.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
@@ -220,7 +160,7 @@
 
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>KFC</h2>
+                            <h2 id="kfc">KFC</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/kfc/kfc.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
@@ -231,7 +171,7 @@
 
                     <div class="player-card">
                         <div class="player-card-id">
-                            <h2>村民交易所</h2>
+                            <h2 id="jiaoyi">村民交易所</h2>
                         </div>
                         <div class="player-card-photos">
                             <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/trade/cm.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
@@ -240,11 +180,34 @@
                         </div>
                     </div>
 
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2 id="jiaotang">教堂</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/Church/jt.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/Church/jt1.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/Church/jt2.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-card-id">
+                            <h2 id="dujiadao">度假岛</h2>
+                        </div>
+                        <div class="player-card-photos">
+                            <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/Vacation/djd.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/Vacation/djd1.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/QiuYu722/mcmmxfd.github.io@main/image/Landmark/Vacation/djd2.webp" alt="地标" class="img-ph img-ph-3" loading="lazy">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
 
+    <button id="backToTop" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">回到顶部</button>
     <script src="script.js"></script>
 </body>
 

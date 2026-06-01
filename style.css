@@ -518,7 +518,7 @@ p {
 
 .photo-panel-3 p {
   text-align: center;
-  line-height: 3;
+  line-height: 2;
   font-size: 50px;
   font-weight: 950;
   margin: 0px;
@@ -531,11 +531,6 @@ p {
   top: -17px;
   right: 20px;
   width: 349px;
-  height: 128px;
-  background-image: url("image/index/gsp.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.7;
 }
 
 /* 位置图标图片 */
@@ -612,6 +607,29 @@ p {
   width: 18px;
   height: 18px;
   accent-color: #2f8f2f;
+}
+
+/* 地标导航链接区 */
+.landmark-nav {
+  width: 600px;
+  margin: 0 auto;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+.landmark-link {
+  display: inline-block;
+  color: #87ceeb;
+  font-size: 1.17em;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 0.5em;
+  transition: color 0.2s ease;
+}
+
+.landmark-link:hover {
+  color: #5bb5e0;
 }
 
 /* 玩家卡片容器 */
@@ -1175,4 +1193,31 @@ p {
   width: 80%;
   margin-left: 0;
   border: 2px solid #cab88f;
+}
+
+/* ========================================
+   回到顶部按钮样式
+   ======================================== */
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
