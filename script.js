@@ -8,6 +8,30 @@
   const API_URL = "/api/messages";
 
   // ========================================
+  // 关于我们页面图片轮播功能（about.html 专用）
+  // 功能：点击上一页/下一页按钮切换图片
+  // DOM: .about-image, .about-prev, .about-next
+  // ========================================
+  let aboutImages = [];
+  let aboutCurrentIndex = 0;
+
+  window.changeAboutImage = function(direction) {
+    if (aboutImages.length === 0) {
+      aboutImages = document.querySelectorAll('.about-image');
+      if (aboutImages.length === 0) return;
+    }
+    
+    // 隐藏当前图片
+    aboutImages[aboutCurrentIndex].classList.remove('active');
+    
+    // 计算新的索引
+    aboutCurrentIndex = (aboutCurrentIndex + direction + aboutImages.length) % aboutImages.length;
+    
+    // 显示新图片
+    aboutImages[aboutCurrentIndex].classList.add('active');
+  };
+
+  // ========================================
   // 轮播图功能（index.html 专用）
   // 功能：合影照片自动轮播 + 手动切换
   // DOM: #carouselSlides, .carousel-container, #carouselIndicators
@@ -337,6 +361,7 @@
     initMapDragZoom();      // 初始化地图拖拽（map.html）
     initUserCards();        // 初始化用户卡片（user.html）
     initImageLightbox();    // 初始化图片放大查看功能
+    initAboutCarousel();    // 初始化关于我们页面图片轮播（about.html）
 
   });
 })();

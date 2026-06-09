@@ -1136,66 +1136,6 @@ p {
 }
 
 /* ========================================
-   关于我们页面样式（about.html 使用）
-   ======================================== */
-
-.about-container {
-  width: 950px;
-  height: 610px;
-  background-image: url('image/avator/book.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 80px auto 0;
-  display: flex;
-  align-items: flex-start;
-  padding-top: 50px;
-}
-
-.book-left {
-  margin-left: 80px;
-  flex: 1;
-}
-
-.book-left-content {
-  width: 360px;
-  height: 200px;
-  text-align: center;
-}
-
-.book-left-avatars {
-  display: flex;
-  flex-wrap: wrap;
-  width: 350px;
-  gap: 10px;
-}
-
-.book-left-avatars img {
-  width: 40px;
-  height: 40px;
-}
-
-.book-right {
-  margin-left: 30px;
-  flex: 1;
-  width: 300px;
-}
-
-.book-right h3 {
-  margin: 0;
-  color: #f1af16;
-}
-
-.book-right p {
-  margin: 10px 0 0 0;
-}
-
-.book-right hr {
-  width: 80%;
-  margin-left: 0;
-  border: 2px solid #cab88f;
-}
-
-/* ========================================
    回到顶部按钮样式
    ======================================== */
 
@@ -1220,4 +1160,65 @@ p {
 .back-to-top:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+/* ========================================
+   介绍
+   ======================================== */
+.about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.about-carousel {
+  width: 60%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.about-image.active {
+  display: block;
+}
+
+.about-prev,
+.about-next {
+  position: absolute;
+  bottom: 7%;
+  padding: 8px 16px;
+  background: transparent;
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  z-index: 10;
+}
+
+.about-prev:hover,
+.about-next:hover {
+  color: #553e2a;
+}
+
+.about-prev {
+  left: 8%;
+}
+
+.about-next {
+  right: 8%;
 }
