@@ -965,14 +965,8 @@ p {
   color: #000;
 }
 
-.report-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* 日报图片使用原始尺寸，仅限制不超出格子 */
-.report-item .wall-photo {
+.report-wall .wall-photo {
   width: auto;
   height: auto;
   max-width: 100%;
@@ -980,16 +974,8 @@ p {
   background-color: transparent;
 }
 
-.report-item .wall-photo.clickable:hover {
+.report-wall .wall-photo.clickable:hover {
   transform: scale(1.1);
-}
-
-.report-caption {
-  margin: 8px 0 0;
-  font-size: 16px;
-  font-weight: 700;
-  color: #000;
-  text-align: center;
 }
 
 /* 图片网格布局（第二版块中使用，已内联在 HTML 中） */
